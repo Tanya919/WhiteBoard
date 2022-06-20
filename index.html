@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel = "Stylesheet" href = "style.css">
+    <link rel="icon" type="image/x-icon" href="/icons/board.png">
+    <title>White-Board</title>
+</head>
+<body>
+    <div class="options-cont">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="tools-cont scale-tools">
+        <img class = "pencil" src = "/icons/pencil1.svg">
+        <img class = "eraser" src = "/icons/eraser.svg">
+        <img class = "download" src = "/icons/download.svg">
+        <img class = "upload" src = "/icons/upload.svg">
+        <img class = "stickynotes" src = "/icons/stickynotes.svg">
+        <img class = "delete" src = "/icons/delete1.svg">
+        
+        <img class = "undo" src = "/icons/undo.svg">
+        <img class = "redo" src = "/icons/redo.svg">
+
+
+    </div>
+    <div class="pencil-tool-cont">
+        <div class="pencil-width-cont">
+            <input type = "range" min = "2" max = "10" value = "3" class = "pencil-width">
+        </div>
+        <div class="pencil-col-cont">
+            <div class="black pencil-color"></div>
+            <div class="red pencil-color"></div>
+            <div class="blue pencil-color"></div>
+        </div>
+    </div>
+    <div class="eraser-tool-cont">
+        <input type = "range" min = "2" max = "20" value = "3" class = "eraser-width">
+    </div>
+
+    <!-- <div class="sticky-cont">
+        <div class="header-cont">
+            <div class="minimize">
+
+            </div>
+
+            <div class="remove">
+
+            </div>
+            </div>
+
+            <div class="note-cont">
+                <textarea></textarea>
+            </div>
+        </div>
+    </div> -->
+<canvas>
+
+</canvas>
+
+
+    <script src = "./tools.js"></script>
+    <script src = "./canvas.js"></script>
+</body>
+</html>
