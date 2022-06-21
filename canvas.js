@@ -47,13 +47,13 @@ tool.lineWidth = penWidth;
 
 //mousedown -> start new path
 //mousemove --> path fill(fill graphics)
-canvas.addEventListener("pointerdown",(e)=>{
+canvas.addEventListener("mousedown",(e)=>{
     mousedown = true;
     tool.beginPath();
     tool.moveTo(e.clientX, e.clientY);
 })
 
-canvas.addEventListener("pointermove", (e) =>{
+canvas.addEventListener("mousemove", (e) =>{
     if(mousedown){
        tool.lineTo(e.clientX, e.clientY);
        tool.stroke();
@@ -61,7 +61,29 @@ canvas.addEventListener("pointermove", (e) =>{
 
 })
 
-canvas.addEventListener("pointerup", (e) => {
+canvas.addEventListener("mouseup", (e) => {
+    mousedown = false;
+
+    let url = canvas.toDataURL();
+    undoRedoTracker.push(url);
+    track = undoRedoTracker.length-1;
+})
+
+canvas.addEventListener("touchdown",(e)=>{
+    mousedown = true;
+    tool.beginPath();
+    tool.moveTo(e.clientX, e.clientY);
+})
+
+canvas.addEventListener("touchmove", (e) =>{
+    if(mousedown){
+       tool.lineTo(e.clientX, e.clientY);
+       tool.stroke();
+    }
+
+})
+
+canvas.addEventListener("touchup", (e) => {
     mousedown = false;
 
     let url = canvas.toDataURL();
