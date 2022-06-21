@@ -186,6 +186,6 @@ canvas{
     background-color: white;
 }
 
-.button:active {
+.button:active{
     transform: translateY(2px);
   }
