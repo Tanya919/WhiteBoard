@@ -93,11 +93,11 @@ optionsCont.addEventListener("click", (e) => {
         stickyCont.setAttribute("class", "sticky-cont");
         stickyCont.innerHTML= `
         <div class="header-cont">
-        <div class="minimize">
+        <div class="minimize button">
 
         </div>
 
-        <div class="remove">
+        <div class="remove button">
 
         </div>
         </div>
