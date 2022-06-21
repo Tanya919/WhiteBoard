@@ -69,27 +69,6 @@ canvas.addEventListener("mouseup", (e) => {
     track = undoRedoTracker.length-1;
 })
 
-canvas.addEventListener("touchdown",(e)=>{
-    mousedown = true;
-    tool.beginPath();
-    tool.moveTo(e.clientX, e.clientY);
-})
-
-canvas.addEventListener("touchmove", (e) =>{
-    if(mousedown){
-       tool.lineTo(e.clientX, e.clientY);
-       tool.stroke();
-    }
-
-})
-
-canvas.addEventListener("touchup", (e) => {
-    mousedown = false;
-
-    let url = canvas.toDataURL();
-    undoRedoTracker.push(url);
-    track = undoRedoTracker.length-1;
-})
 
 
 del.addEventListener("click", (e) => {
